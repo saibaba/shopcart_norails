@@ -1,0 +1,83 @@
+D, [2013-12-08T08:47:00.943890 #82142] DEBUG -- :   [1m[36m (29.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+D, [2013-12-08T08:47:00.952008 #82142] DEBUG -- :   [1m[35m (7.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+D, [2013-12-08T08:47:00.953236 #82142] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T08:47:00.953353 #82142]  INFO -- : Migrating to CreateProducts (1)
+D, [2013-12-08T08:47:00.954314 #82142] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-08T08:47:00.956342 #82142] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) NOT NULL, "description" text, "image_url" varchar(255), "price" decimal) [0m
+D, [2013-12-08T08:47:00.980110 #82142] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "1"]]
+D, [2013-12-08T08:47:00.989797 #82142] DEBUG -- :   [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+D, [2013-12-08T08:48:27.274260 #82147] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-08T08:48:27.277419 #82147] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-08T08:48:27.278403 #82147] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T08:48:27.278533 #82147]  INFO -- : Migrating to CreateProducts (1)
+D, [2013-12-08T08:48:27.279229 #82147] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-08T08:48:27.336741 #82147] DEBUG -- :   [1m[36m (57.2ms)[0m  [1mDROP TABLE "products"[0m
+D, [2013-12-08T08:48:27.380229 #82147] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-08T08:48:27.388534 #82147] DEBUG -- :   [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+D, [2013-12-08T08:48:35.956949 #82148] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T08:48:35.957090 #82148]  INFO -- : Migrating to CreateProducts (1)
+D, [2013-12-08T08:48:35.957818 #82148] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-08T08:48:35.987195 #82148] DEBUG -- :   [1m[36m (2.4ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) NOT NULL, "description" text, "image_url" varchar(255), "price" decimal) [0m
+D, [2013-12-08T08:48:35.996552 #82148] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "1"]]
+D, [2013-12-08T08:48:36.040113 #82148] DEBUG -- :   [1m[36m (43.0ms)[0m  [1mcommit transaction[0m
+D, [2013-12-08T17:03:29.456814 #95549] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T17:03:29.459399 #95549]  INFO -- : Migrating to CreateCarts (2)
+D, [2013-12-08T17:03:29.460049 #95549] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-08T17:03:29.483105 #95549] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+D, [2013-12-08T17:03:29.549578 #95549] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "2"]]
+D, [2013-12-08T17:03:29.558222 #95549] DEBUG -- :   [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+D, [2013-12-08T17:07:50.369256 #95562] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T17:07:50.371805 #95562]  INFO -- : Migrating to CreateLineLtems (3)
+D, [2013-12-08T17:08:10.172306 #95564] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T17:08:10.174888 #95564]  INFO -- : Migrating to CreateLineLtems (3)
+D, [2013-12-08T17:08:21.367738 #95566] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T17:08:21.370376 #95566]  INFO -- : Migrating to CreateLineLtems (3)
+D, [2013-12-08T17:09:02.358239 #95573] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T17:09:02.360771 #95573]  INFO -- : Migrating to CreateLineLtems (3)
+D, [2013-12-08T17:10:00.874005 #95575] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T17:10:00.876472 #95575]  INFO -- : Migrating to CreateLineLtems (3)
+D, [2013-12-08T17:10:29.667567 #95578] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T17:10:29.670151 #95578]  INFO -- : Migrating to CreateLineItems (3)
+D, [2013-12-08T17:10:29.670815 #95578] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-08T17:10:29.692873 #95578] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+D, [2013-12-08T17:10:29.697285 #95578] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "3"]]
+D, [2013-12-08T17:10:29.742267 #95578] DEBUG -- :   [1m[36m (44.6ms)[0m  [1mcommit transaction[0m
+D, [2013-12-08T17:21:18.821130 #96068] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-08T22:50:07.760893 #4884] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-08T23:12:07.841837 #6165] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-08T23:12:20.798283 #6167] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-08T23:12:20.803379 #6167] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-08T23:12:20.805045 #6167] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T23:12:20.805362 #6167]  INFO -- : Migrating to CreateLineItems (3)
+D, [2013-12-08T23:12:20.806518 #6167] DEBUG -- :   [1m[35m (0.2ms)[0m  begin transaction
+D, [2013-12-08T23:12:20.807640 #6167] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mDROP TABLE "line_items"[0m
+D, [2013-12-08T23:12:20.822046 #6167] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '3'
+D, [2013-12-08T23:12:20.832571 #6167] DEBUG -- :   [1m[36m (10.2ms)[0m  [1mcommit transaction[0m
+I, [2013-12-08T23:12:20.832685 #6167]  INFO -- : Migrating to CreateCarts (2)
+D, [2013-12-08T23:12:20.833711 #6167] DEBUG -- :   [1m[35m (0.2ms)[0m  begin transaction
+D, [2013-12-08T23:12:20.834910 #6167] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mDROP TABLE "carts"[0m
+D, [2013-12-08T23:12:20.836117 #6167] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '2'
+D, [2013-12-08T23:12:20.848784 #6167] DEBUG -- :   [1m[36m (12.4ms)[0m  [1mcommit transaction[0m
+I, [2013-12-08T23:12:20.848900 #6167]  INFO -- : Migrating to CreateProducts (1)
+D, [2013-12-08T23:12:20.850233 #6167] DEBUG -- :   [1m[35m (0.2ms)[0m  begin transaction
+D, [2013-12-08T23:12:20.851859 #6167] DEBUG -- :   [1m[36m (1.0ms)[0m  [1mDROP TABLE "products"[0m
+D, [2013-12-08T23:12:20.853480 #6167] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-08T23:12:20.863466 #6167] DEBUG -- :   [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+D, [2013-12-08T23:12:23.967748 #6268] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-08T23:12:23.967971 #6268]  INFO -- : Migrating to CreateProducts (1)
+D, [2013-12-08T23:12:23.969041 #6268] DEBUG -- :   [1m[35m (0.2ms)[0m  begin transaction
+D, [2013-12-08T23:12:23.975453 #6268] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) NOT NULL, "description" text, "image_url" varchar(255), "price" decimal) [0m
+D, [2013-12-08T23:12:23.985162 #6268] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "1"]]
+D, [2013-12-08T23:12:24.037664 #6268] DEBUG -- :   [1m[36m (52.0ms)[0m  [1mcommit transaction[0m
+I, [2013-12-08T23:12:24.037792 #6268]  INFO -- : Migrating to CreateCarts (2)
+D, [2013-12-08T23:12:24.038689 #6268] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-08T23:12:24.040029 #6268] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+D, [2013-12-08T23:12:24.042062 #6268] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "2"]]
+D, [2013-12-08T23:12:24.051702 #6268] DEBUG -- :   [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+I, [2013-12-08T23:12:24.051812 #6268]  INFO -- : Migrating to CreateLineItems (3)
+D, [2013-12-08T23:12:24.052799 #6268] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-08T23:12:24.054309 #6268] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer) [0m
+D, [2013-12-08T23:12:24.054845 #6268] DEBUG -- :   [1m[35m (0.2ms)[0m  CREATE INDEX "index_line_items_on_product_id" ON "line_items" ("product_id")
+D, [2013-12-08T23:12:24.055336 #6268] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_line_items_on_cart_id" ON "line_items" ("cart_id")[0m
+D, [2013-12-08T23:12:24.056848 #6268] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "3"]]
+D, [2013-12-08T23:12:24.066841 #6268] DEBUG -- :   [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
