@@ -20,8 +20,8 @@ rake VERSION=0
 
 When you change any existing migration script, rake won't pick it up. Need to first remove everything (rake VERSION=0) and run rake again.
 
-Run app:
-ruby app.rb
+Run minitests:
+rake test
 
 Run sqlite:
 sqlite3 -line development.sqlite3 "select * from products"
