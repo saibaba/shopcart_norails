@@ -26,6 +26,12 @@ rake test
 Run sqlite:
 sqlite3 -line development.sqlite3 "select * from products"
 
+Misc Notes
+==========
+
+None.
+
+
 Reference
 =========
 
